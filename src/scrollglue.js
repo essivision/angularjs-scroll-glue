@@ -105,7 +105,7 @@ if(typeof module === "object" && module.exports){
     var bottom = {
         isAttached: function(el){
             // + 1 catches off by one errors in chrome
-            return el.scrollTop + el.clientHeight + 1 >= el.scrollHeight;
+            return el.scrollTop + el.clientHeight + 1 >= el.scrollHeight - 15;
         },
         scroll: function(el){
             el.scrollTop = el.scrollHeight;
